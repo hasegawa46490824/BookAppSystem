@@ -14,7 +14,7 @@ db = SQLAlchemy(app)
 #テーブルの作成 classを作ったら自動で作成できる。
 class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    isbm = db.Column(db.Integer, nullable=False)
+    isbn = db.Column(db.Integer, nullable=False)
     title = db.Column(db.String(100), nullable=False)
     author = db.Column(db.String(100), nullable=False)
     publisher = db.Column(db.String(100), nullable=False)
@@ -29,4 +29,4 @@ def home():
     return render_template("index.html", books=books)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True , host="127.0.0.1" , port = 5000)

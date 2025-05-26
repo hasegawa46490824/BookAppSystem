@@ -31,7 +31,7 @@
             </h2>
             <form>
                 <div class="d-flex align-items-center justify-content-center">
-                    <label class="form-label ps-2 pe-2" for="isbm">ISBM</label>
+                    <label class="form-label ps-2 pe-2" for="isbn">ISBN</label>
                     <input class="form-control flex-grow-1 w-auto" type="text" name="name" id="name">
                     <button type="submit" class="btn btn-primary ms-3">登録</button>
                 </div>
@@ -57,7 +57,7 @@
                     {% for book in books %}
                     <tr>
                         <td>{{ book.id }}</td>
-                        <td>{{ book.isbm }}</td>
+                        <td>{{ book.isbn }}</td>
                         <td>{{ book.title }}</td>
                         <td>{{ book.author }}</td>
                         <td>{{ book.publisher }}</td>
